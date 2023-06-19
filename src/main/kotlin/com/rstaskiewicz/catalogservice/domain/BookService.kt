@@ -25,7 +25,10 @@ class BookService(private val bookRepository: BookRepository) {
                     existingBook.isbn,
                     book.title,
                     book.author,
-                    book.price
+                    book.price,
+                    existingBook.id,
+                    existingBook.version,
+                    existingBook.createdDate
                 )
                 bookRepository.save(bookToUpdate)
             } ?: addBookToCatalog(book)

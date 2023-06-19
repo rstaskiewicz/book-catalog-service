@@ -2,9 +2,11 @@ package com.rstaskiewicz.catalogservice.infrastructure
 
 import com.rstaskiewicz.catalogservice.domain.Book
 import com.rstaskiewicz.catalogservice.domain.BookRepository
+import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Repository
 import java.util.concurrent.ConcurrentHashMap
 
+@Profile("inmemory")
 @Repository
 class InMemoryBookRepository : BookRepository {
 

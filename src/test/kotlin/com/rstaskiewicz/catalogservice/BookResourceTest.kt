@@ -12,7 +12,6 @@ import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
-
 @WebMvcTest(controllers = [BookResource::class])
 class BookResourceTest {
 
